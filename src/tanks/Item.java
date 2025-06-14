@@ -2,10 +2,10 @@
 package tanks;
 
 public abstract class Item {
-    protected String name;
-    protected double riskFactor;
-    protected double densityKgPerGallon;
-    protected double quantityGallons;
+    private String name;
+    private double riskFactor;
+    private double densityKgPerGallon;
+    private double quantityGallons;
     
     //Constructor
     public Item(String name, double riskFactor, double densityKgPerGallon, double quantityGallons) {
@@ -37,6 +37,11 @@ public abstract class Item {
     public double calculateWeight() {
         return quantityGallons * densityKgPerGallon;
     }
+    
+    public abstract void printItemInfo();
+}
+
+
     
     public abstract void printItemInfo();
 }
