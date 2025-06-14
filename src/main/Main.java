@@ -16,7 +16,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in); // Scanner for user input
         try {
             //Step 1: Displaying project information (name, ID, group, submission date)
-            Info info = new Info("Roza Antonevici", "62977808", "B", "June 13");
+            Info info = new Info("Roza Antonevici", "xxxxxxxx", "B", "June 13");
             info.printInfo();
 
             //Step 2: Initializing the calculation and distance systems
