@@ -1,67 +1,44 @@
 //Roza Antonevici
 package tanks;
 
-public class Item {
-	
-	//private item attributes
-	private double length; //in m
-	private double radius; //in m
-	private double weight;// in kg
-	private String name;
-	
-	//constructor
-	public Item(String name,double length,double weight) {
-		this.name= name;
-		this.length = length;
-		this.weight= weight;
-	}
-	// getters and setters
-	public double getLength() {
-		return length;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public void setLength(double length) {
-		this.length = length;
-	}
-
-	public double getRadius() {
-		return radius;
-	}
-
-	public void setRadius(double Radius) {
-		this.radius = radius;
-	}
-
-	public double getWeight() {
-		return weight;
-	}
-
-	public void setWeight(double weight) {
-		this.weight = weight;
-	}
-	
-	// calculates the volume of item's package
-	public double getItemVolume() {
-		double volume = this.getLength()*this.getRadius();
-		return volume;
-		
-	}
-	// prints specific item's information
-	public void printItemInfo() {
-		String str;
-		str= "Item name: "+ this.name+"/nItem length: "+ this.length+"m"+"\nItem radius: "+ this.radius+"m"+
-		"\nItem weight: "+this.weight+"kg"; 
-		System.out.println(str);
-
+public abstract class Item {
+    protected String name;
+    protected double riskFactor;
+    protected double densityKgPerGallon;
+    protected double quantityGallons;
+    
+    //Constructor
+    public Item(String name, double riskFactor, double densityKgPerGallon, double quantityGallons) {
+        this.name = name;
+        this.riskFactor = riskFactor;
+        this.densityKgPerGallon = densityKgPerGallon;
+        this.quantityGallons = quantityGallons;
+    }
+    
+    //Getters and setters
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+    
+    public double getRiskFactor() { return riskFactor; }
+    public void setRiskFactor(double riskFactor) { this.riskFactor = riskFactor; }
+    
+    public double getDensityKgPerGallon() { return densityKgPerGallon; }
+    public void setDensityKgPerGallon(double densityKgPerGallon) { this.densityKgPerGallon = densityKgPerGallon; }
+    
+    public double getQuantityGallons() { return quantityGallons; }
+    public void setQuantityGallons(double quantityGallons) { this.quantityGallons = quantityGallons; }
+    
+    //Calculating volume in cubic meters (1 gallon = 0.00378541 cubic meters)
+    public double calculateVolume() {
+        return quantityGallons * 0.00378541;
+    }
+    
+    //Calculating weight in kg
+    public double calculateWeight() {
+        return quantityGallons * densityKgPerGallon;
+    }
+    
+    public abstract void printItemInfo();
 }
-	
-	}
-	
+
+
