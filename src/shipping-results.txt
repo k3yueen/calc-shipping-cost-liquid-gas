@@ -1,0 +1,57 @@
+Project Information:
+Student Name: Roza Antonevici
+Matriculation Number: xxxxxxxx
+Group: B
+Creation Date: June 13
+Total Lines of Code: 830
+
+Available Products:
+C3H6: Propene
+O2: Oxygen
+N2: Nitrogen
+H2O: Water
+CO2: Carbon Dioxide
+H2: Hydrogen
+BEN: Benzene Super
+MLK: Milk
+CH4: Methane
+B95: Benzene Super E95
+
+Available Cities:
+Munich
+Rome
+Dresden
+Berlin
+Madrid
+Bucharest
+Leipzig
+Köln
+Vienna
+Paris
+
+Enter destination city:
+Vienna
+
+Enter product code (or type 'done' to view the shipping detail and your best solution): 
+B95
+Enter volume in gallons (and 'done' to view the shipping detail and your best solution):
+30000000
+
+Enter product code (or type 'done' to view the shipping detail and your best solution): 
+done
+
+----- Shipping Details -----
+From: Hamburg
+To: Vienna
+Distance: 740.93 km
+
+----- Required Trucks -----
+1x Small
+3x Medium
+950x Large
+
+----- Cost Breakdown -----
+Base Cost: 186714671.19 EUR
+Risk Factor Cost: 53347048.91 EUR
+Return Trip Cost: 26673524.46 EUR
+Total Cost: 266735244.56 EUR
